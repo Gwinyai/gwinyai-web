@@ -13,7 +13,7 @@ export default function Home() {
     <div className="container">
       <Head>
         <title>Gwinyai Nyatsoka</title>
-        <meta name="description" content="Gwinyai Nyatsoka is an iOS, NodeJS and React developer." />
+        <meta name="description" content="Gwinyai Nyatsoka is an iOS (Swift), NodeJS and React developer." />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.content}>
