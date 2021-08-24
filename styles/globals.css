@@ -16,3 +16,26 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.form {
+  padding:10px;
+}
+
+.form label:not(.form-check-label) {
+  margin-top: 15px;
+}
+
+.form input:not(.form-check-input) {
+  margin-top: 15px;
+}
+
+.form select {
+  margin-top: 15px;
+}
+
+.verticalCenter {
+  min-height: 100%;  
+  min-height: 100vh; 
+  display: flex;
+  align-items: center;
+}
