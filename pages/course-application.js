@@ -1,5 +1,24 @@
 import styles from '../styles/Application.module.css'
 import { useState } from "react"
+import { useMutation, gql } from "@apollo/client"
+
+const CREATE_PROSPECT = gql`
+    mutation CreateProspect($firstName: String!, 
+    $lastName: String!, 
+    $phoneNumber: String!,
+    $experience: Experience!,
+    $availability: Availability!,
+    $course: [Course!]!,
+    $email: String!) {
+        createProspect(firstName: $firstName, 
+        lastName: $lastName, 
+        phoneNumber: $phoneNumber,
+        experience: $experience,
+        availability: $availability,
+        course: $course,
+        email: $email)
+    }
+`
 
 const Application = () => {
     const [firstName, setFirstName] = useState("")
@@ -8,13 +27,42 @@ const Application = () => {
     const [lastNameError, setLastNameError] = useState("")
     const [email, setEmail] = useState("")
     const [emailError, setEmailError] = useState("")
-    const [phone, setPhone] = useState("")
+    const [phoneNumber, setPhone] = useState("")
     const [phoneError, setPhoneError] = useState("")
     const [isNodeSelected, setNodeSelected] = useState(false)
     const [isReactSelected, setReactSelected] = useState(false)
+    const [courseError, setCourseError] = useState("")
+    const [skill, setSkill] = useState("BEGINNER")
+    const [availability, setAvailability] = useState("MORNING")
+
+    const [createProspect, { loading: mutationLoading, error: mutationError }] = useMutation(CREATE_PROSPECT, {
+        onCompleted: (data) => {
+            console.log("successful submission!")
+        },
+        onError: (error) => {
+            console.log(error.message)
+        }
+    });
 
     const onSubmit = (e) => {
         e.preventDefault();
+        console.log("attempted submission")
+        if (!!firstNameError || !!lastNameError || !!emailError || !!phoneError) {
+            return
+        }
+        if (!isNodeSelected && !isReactSelected) {
+            setCourseError("Select at least one course")
+            console.log("no course selected")
+            return
+        }
+        const selectedCourses = []
+        if (isNodeSelected) {
+            selectedCourses.push("NODEJS")
+        }
+        if (isReactSelected) {
+            selectedCourses.push("REACT")
+        }
+        createProspect({ variables: { firstName, lastName, phoneNumber, experience: skill, availability, course: selectedCourses, email } })
     };
 
     const handleFirstNameChange = (e) => {
@@ -79,11 +127,25 @@ const Application = () => {
     const handleNodeChange = (e) => {
         const isSelected = e.target.checked
         setNodeSelected(isSelected)
+        if (isSelected) {
+            setCourseError("")
+        }
     }
 
     const handleReactChange = (e) => {
         const isSelected = e.target.checked
         setReactSelected(isSelected)
+        if (isSelected) {
+            setCourseError("")
+        }
+    }
+
+    const handleSkillChange = (e) => {
+        setSkill(e.target.value)
+    }
+
+    const handleAvailabilityChange = (e) => {
+        setAvailability(e.target.value)
     }
 
     return (
@@ -91,36 +153,37 @@ const Application = () => {
         <div className="container">
             <h1 className={styles.title}>Course Application</h1>
             <p className={styles.detail}>Choose whether you would like to do NodeJS or ReactJS (or both). For full details of the course please have a look at the course curriculum here. Once your application has been approved you will be asked to make a payment.</p>
+            {mutationError && <div className="formError">{mutationError.message}</div> }
             <form onSubmit={onSubmit} className="form">
                 <div className="form-group">
                     <label htmlFor="firstname">First Name:</label>
                     <input name="firstname" 
-                    className={`form-control ${!!firstNameError ? "is-invalid" : ""}`} 
+                    className={`form-control`} 
                     placeholder="Enter First Name" 
                     id="firstname" 
                     autoFocus
                     onChange={handleFirstNameChange} />
-                    <div className="invalid-feedback">{firstNameError}</div>
+                    <div className="formError">{firstNameError}</div>
                 </div>
                 <div className="form-group">
                     <label htmlFor="lastname">Last Name:</label>
                     <input name="lastname" 
-                    className={`form-control ${!!lastNameError ? "is-invalid" : ""}`} 
+                    className={`form-control`} 
                     placeholder="Enter Last Name" 
                     onChange={handleLastNameChange}
                     id="lastname" />
-                    <div className="invalid-feedback">{lastNameError}</div>
+                    <div className="formError">{lastNameError}</div>
                 </div>
                 <div className="form-group">
                     <label htmlFor="email">Email:</label>
                     <input type="email" 
                     name="email" 
-                    className={`form-control ${!!emailError ? "is-invalid" : ""}`}
+                    className={`form-control`}
                     placeholder="Enter Email" 
                     id="email" 
                     onChange={handleEmailChange}
                     />
-                    <div className="invalid-feedback">{emailError}</div>
+                    <div className="formError">{emailError}</div>
                 </div>
                 <div className="form-group">
                     <label htmlFor="phone">Phone Number:</label>
@@ -129,12 +192,12 @@ const Application = () => {
                         <span className="input-group-text">+263</span>
                     </div>
                     <input name="phone" 
-                    className={`form-control ${!!phoneError ? "is-invalid" : ""}`} 
+                    className={`form-control`} 
                     placeholder="Enter Phone Number" 
                     id="phone"
                     onChange={handlePhoneChange}  />
-                    <div className="invalid-feedback">{phoneError}</div>
                     </div>
+                    <div className="formError">{phoneError}</div>
                 </div>
                 <div className="form-group">
                 <label>Select Courses:</label>
@@ -148,25 +211,26 @@ const Application = () => {
                     <label className="form-check-label" htmlFor="nodejs">ReactJS</label>
                 </div>
                 </div>
+                <div className="formError">{courseError}</div>
                 </div>
                 <div className="form-group">
                 <label htmlFor="skill">Your Skill Level with Javascript:</label>
-                <select className="form-control" id="skill">
-                    <option>Beginner</option>
-                    <option>Intermediate</option>
-                    <option>Professional</option>
+                <select className="form-control" id="skill" name="skill" value={skill} onChange={handleSkillChange}>
+                    <option value="BEGINNER">Beginner</option>
+                    <option value="INTERMEDIATE">Intermediate</option>
+                    <option value="PROFESSIONAL">Professional</option>
                 </select>
                 </div>
                 <div className="form-group">
                 <label htmlFor="time">Your Preferred Time for Lessons:</label>
-                <select className="form-control" id="time">
-                    <option>Morning</option>
-                    <option>Afternoon</option>
-                    <option>Evening</option>
+                <select className="form-control" id="time" name="time" value={availability} onChange={handleAvailabilityChange}>
+                    <option value="MORNING">Morning</option>
+                    <option value="AFTERNOON">Afternoon</option>
+                    <option value="EVENING">Evening</option>
                 </select>
                 </div>
                 <div className="d-grid gap-2">
-                <button type="button" className={["btn", "btn-primary", styles.submitButton].join(' ')}>Apply</button>
+                <button type="submit" className={["btn", "btn-primary", styles.submitButton].join(' ')}>Apply</button>
                 </div>
             </form>
         </div>
