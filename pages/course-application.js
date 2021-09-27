@@ -169,9 +169,9 @@ const Application = () => {
       <div className="container">
         <h1 className={styles.title}>Course Application</h1>
         <p className={styles.detail}>
-          When you complete this course application, login details to your
-          student account will be sent via email and SMS. Use your student
-          account to make payment and enroll in the course.
+          When you submit this application, an automated message with your
+          student account login details will be sent via email and SMS. Use your
+          student account to make payment and enroll in the course.
         </p>
         {mutationError && (
           <div className="formError">{mutationError.message}</div>
