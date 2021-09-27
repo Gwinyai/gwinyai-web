@@ -10,7 +10,6 @@ body {
 
 a {
   color: inherit;
-  
 }
 
 * {
@@ -18,7 +17,7 @@ a {
 }
 
 .form {
-  padding:10px;
+  padding: 10px;
 }
 
 .form label:not(.form-check-label) {
@@ -34,12 +33,24 @@ a {
 }
 
 .verticalCenter {
-  min-height: 100%;  
-  min-height: 100vh; 
+  min-height: 100%;
+  min-height: 100vh;
   display: flex;
   align-items: center;
 }
 
+.introContent {
+  text-align: center;
+}
+
 .formError {
   color: red;
+}
+
+.topSpacing {
+  margin-top: 90px;
+}
+
+.accordion {
+  color: black;
 }
