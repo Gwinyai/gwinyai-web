@@ -173,28 +173,38 @@ const Application = () => {
 
   if (showAlert) {
     return (
-      <div className="jumbotron verticalCenter">
-        <div className="container">
-          <Alert
-            variant="success"
-            onClose={() => {
-              Router.push("/");
-            }}
-            dismissible
-          >
-            <Alert.Heading>Success!</Alert.Heading>
-            <p>
-              Proceed to{" "}
-              <a href="https://student.gwinyai.com">
-                https://student.gwinyai.com
-              </a>{" "}
-              to enroll in the course and make payment. Your password is{" "}
-              {password} which has also been sent to the email and phone number
-              you provided with the application.
-            </p>
-          </Alert>
+      <>
+        <Head>
+          <title>NodeJS and ReactJS Master Course</title>
+          <meta
+            name="description"
+            content="Learn NodeJS and ReactJS from a Udemy best selling instructor and CTO of a Boston based startup."
+          />
+          <link rel="icon" href="/favicon.ico" />
+        </Head>
+        <div className="jumbotron verticalCenter">
+          <div className="container">
+            <Alert
+              variant="success"
+              onClose={() => {
+                Router.push("/");
+              }}
+              dismissible
+            >
+              <Alert.Heading>Success!</Alert.Heading>
+              <p>
+                Proceed to{" "}
+                <a href="https://student.gwinyai.com">
+                  https://student.gwinyai.com
+                </a>{" "}
+                to enroll in the course and make payment. Your password is{" "}
+                {password} which has also been sent to the email and phone
+                number you provided with the application.
+              </p>
+            </Alert>
+          </div>
         </div>
-      </div>
+      </>
     );
   }
 
