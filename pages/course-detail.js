@@ -32,18 +32,17 @@ export const Detail = () => {
         <br />
         <br />
         <p className="introContent">
-          Demand for remote developers has surged past demand making remote job
-          positions more abundant. Demand has also surged because of the
-          COVID-19 epidemic which has changed the way we work. Today, you can
-          work for a foreign based company from the comfort of your home and
-          earn a comfortable 5 figure salary in US dollars. You do not need a
-          fancy degree, to have many years of experience or to belong to any
-          developed nation to take advantage of this opportunity. All you need
-          is an internet connection, a computer, the right skills and the
-          ability to market yourself. How do I know this? I speak from
-          experience. I work as a remote software developer for a Boston based
-          startup as CTO, earning a 5 figure salary in US dollars all from my
-          home in Harare.
+          Demand for remote developers has surged past supply making remote job
+          positions more abundant. This is in part because of the COVID-19
+          epidemic which has changed the way we work. Today, you can work for a
+          foreign based company from the comfort of your home and earn a
+          comfortable 5 figure salary in US dollars. You do not need a fancy
+          degree, to have many years of experience or to belong to any developed
+          nation to take advantage of this opportunity. All you need is an
+          internet connection, a computer, the right skills and the ability to
+          market yourself. I personally speak from experience. I work as a
+          remote software developer for a Boston based startup as CTO, earning a
+          5 figure salary in US dollars all from my home in Harare.
         </p>
         <br />
         <div className="d-grid gap-2 col-6 mx-auto">
@@ -61,18 +60,16 @@ export const Detail = () => {
         </h3>
         <br />
         <p>
-          I have put together a course aimed specifically at Zimbabweans to
-          educate people in finding and securing remote developer positions.
-          This course aims to teach NodeJS and ReactJS at a competency level
-          high enough to find a remote developer position and to you teach how
-          to market yourself.
+          I have put together a course specifically for Zimbabweans that teaches
+          NodeJS and ReactJS at a competency level high enough to perform as a
+          remote developer. This course also aims to teach how to market
+          yourself in securing a remote developer position.
         </p>
         <p>
-          But why NodeJS and ReactJS, you wonder? Well, these are some of the
-          most in demand programming frameworks around with an almost certain
-          guarantee you will find an opportunity to make meaningful income. The
-          average salary for a remote NodeJS or ReactJS developer is $72000 USD
-          a year!
+          NodeJS and ReactJS are some of the most in demand programming
+          frameworks around with an almost certain guarantee you will find an
+          opportunity to make meaningful income. The average salary for a remote
+          NodeJS or ReactJS developer is $72,000 USD a year!
         </p>
         <br />
         <h3>
@@ -81,19 +78,18 @@ export const Detail = () => {
         </h3>
         <br />
         <p>
-          I have taught over 10,000 (yes, ten thousand) students from all around
-          the world and earned the coveted Best Seller status for an iOS course
-          I made an Udemy. Teaching has always been a past time hobby of mine
-          but for the first time I will bring something tailored to my country.
-          This course has everything I have found effective in teaching
-          including study notes, interactive playgrounds and online tests in an
+          I have taught over ten thousand students from all around the world and
+          earned the coveted Best Seller status for an iOS course I made on
+          Udemy. Teaching has always been a past time hobby of mine but for the
+          first time I will bring something tailored to my country. This course
+          has everything I have found to be effective in teaching including
+          study notes, interactive playgrounds and online tests hosted in an
           online student portal I personally built (using NodeJS and ReactJS of
-          course). I am flexible with online and in person classes. This is not
-          a pre-made video course but involves live sessions where students have
-          access to me in live streamed video or in person classes. For this
-          reason, I have a limited places available. I cannot accomodate many
-          people. Applications will be accepted on a first come first serve
-          basis.
+          course). I will conducting live streamed video or in-person classes.
+          This is not one of those courses where you learn with pre-made videos
+          but involves live sessions where students have access to me. For this
+          reason, I have a limited places available. Applications will be
+          accepted on a first come first serve basis.
         </p>
         <br />
         <h3>
@@ -102,7 +98,7 @@ export const Detail = () => {
         </h3>
         <br />
         <p>
-          You need a computer running Windows or Mac. If you would like
+          You need a recent computer running Windows or MacOS. If you would like
           in-person lessons you should have a laptop. You need an internet
           connection if you are taking live streamed lessons. Internet is
           provided for in-person lessons.
