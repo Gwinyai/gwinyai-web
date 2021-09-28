@@ -46,10 +46,12 @@ const Application = () => {
   const [skill, setSkill] = useState("BEGINNER");
   const [availability, setAvailability] = useState("MORNING");
   const [showAlert, setShowAlert] = useState(false);
+  const [password, setPassword] = useState("");
 
   const [createProspect, { loading: mutationLoading, error: mutationError }] =
     useMutation(CREATE_PROSPECT, {
       onCompleted: (data) => {
+        setPassword(data.createProspect.password);
         setShowAlert(true);
       },
       onError: (error) => {
@@ -186,9 +188,9 @@ const Application = () => {
               <a href="https://student.gwinyai.com">
                 https://student.gwinyai.com
               </a>{" "}
-              to enroll in the course and make payment. Your password has been
-              sent to the email and phone number you provided in the
-              application.
+              to enroll in the course and make payment. Your password is{" "}
+              {password} which has also been sent to the email and phone number
+              you provided with the application.
             </p>
           </Alert>
         </div>
