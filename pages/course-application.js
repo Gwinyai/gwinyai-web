@@ -223,9 +223,8 @@ const Application = () => {
           <h1 className={styles.title}>Course Application</h1>
           <p className={styles.detail}>
             When you submit this application, an automated message with your
-            student account login details will be sent via email and SMS. Use
-            your student account to make payment and enroll in the course. Call
-            or app 0771210740 for if you need any help.
+            student account login details will be sent via email and SMS. Call
+            or app 0771210740 if you need any help.
           </p>
           {mutationError && (
             <div className="formError">{mutationError.message}</div>
