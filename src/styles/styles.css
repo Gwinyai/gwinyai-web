@@ -137,9 +137,9 @@
   transition: all 0.3s;
 }
 
-.main-nav-link:hover,
-.main-nav-link:active {
-  color: #000;
+.main-nav-active:link,
+.main-nav-active:visited {
+  color: #9b9b9b;
 }
 
 .main-nav-link.nav-cta:hover,

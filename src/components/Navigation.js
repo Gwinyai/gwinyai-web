@@ -1,53 +1,76 @@
-import { Link } from "react-router-dom";
-import { useState } from "react";
+import { Link, useHistory, NavLink } from "react-router-dom";
+import { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes, faBars } from "@fortawesome/free-solid-svg-icons";
+import classNames from "classnames";
 
 export default function Navigation() {
+  const history = useHistory();
   const [navOpen, setNav] = useState(false);
-  const showNav = () => {
-    setNav(true);
-  };
-  const closeNav = () => {
-    setNav(false);
+  /*
+  useEffect is called when the component is mounting/rendered. Here we put a listener waiting for changes on the Link.
+  */
+  useEffect(() => {
+    history.listen(() => {
+      setNav(false);
+    });
+  });
+  /*
+  Instead of creating a showNav and closeNav functions, I use currying to have one function that handles a true or false parameter to open/close the menu.
+  */
+  const showNav = (navState) => (e) => {
+    setNav(navState);
   };
   return (
     <>
-      <header className={navOpen ? "nav-open header" : "header"}>
+      <header className={classNames({ "nav-open": navOpen, header: true })}>
         <nav className="main-nav">
           <ul className="main-nav-list">
             <li>
-              <Link onClick={closeNav} to="/" className="main-nav-link">
+              <NavLink
+                to="/"
+                exact={true}
+                className="main-nav-link"
+                activeClassName="main-nav-active"
+              >
                 Home
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link onClick={closeNav} to="/skills" className="main-nav-link">
+              <NavLink
+                to="/skills"
+                className="main-nav-link"
+                activeClassName="main-nav-active"
+              >
                 Skills
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link
-                onClick={closeNav}
+              <NavLink
                 to="/portfolio"
                 className="main-nav-link"
+                activeClassName="main-nav-active"
               >
                 Portfolio
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link onClick={closeNav} to="/courses" className="main-nav-link">
+              <NavLink
+                to="/courses"
+                className="main-nav-link"
+                activeClassName="main-nav-active"
+              >
                 Courses
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link
-                onClick={closeNav}
+              <NavLink
                 to="/experience"
                 className="main-nav-link"
+                activeClassName="main-nav-active"
               >
                 Experience
-              </Link>
+              </NavLink>
             </li>
           </ul>
         </nav>
@@ -57,14 +80,14 @@ export default function Navigation() {
             name="close-outline"
             icon={faTimes}
             size="2x"
-            onClick={closeNav}
+            onClick={showNav(false)}
           ></FontAwesomeIcon>
           <FontAwesomeIcon
             className="icon-mobile-nav"
             name="menu-outline"
             icon={faBars}
             size="2x"
-            onClick={showNav}
+            onClick={showNav(true)}
           ></FontAwesomeIcon>
         </button>
       </header>
