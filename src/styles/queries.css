@@ -31,7 +31,10 @@
   }
 }
 
-@media (max-width: 35em) {
+@media (max-width: 30em) {
+  .profile-pic {
+    width: 40%;
+  }
   .main-nav {
     background-color: rgba(255, 255, 255, 0.97);
     position: absolute;
@@ -43,6 +46,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    -webkit-justify-content: center;
     transition: all 0.5s ease-out;
     opacity: 0;
     pointer-events: none;
@@ -71,6 +75,10 @@
     gap: 4.8rem;
   }
 
+  .main-nav-list > * + * {
+    margin-top: 4.8rem;
+  }
+
   .main-nav-link:link,
   .main-nav-link:visited {
     font-size: 3rem;
@@ -86,5 +94,11 @@
 
   .section-courses {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 23em) {
+  .profile-pic {
+    width: 50%;
   }
 }
