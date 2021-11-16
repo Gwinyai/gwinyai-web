@@ -4,6 +4,7 @@ import {
   faFacebook,
   faGithub,
   faMedium,
+  faStackOverflow,
 } from "@fortawesome/free-brands-svg-icons";
 import profilePic from "../images/profile.png";
 
@@ -66,6 +67,18 @@ export default function HomePage() {
                   rel="noopener noreferrer"
                 >
                   <FontAwesomeIcon icon={faGithub} size="2x"></FontAwesomeIcon>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://stackoverflow.com/users/3008901/gwinyai"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FontAwesomeIcon
+                    icon={faStackOverflow}
+                    size="2x"
+                  ></FontAwesomeIcon>
                 </a>
               </li>
               <li>
