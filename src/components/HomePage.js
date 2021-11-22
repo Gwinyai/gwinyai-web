@@ -40,7 +40,7 @@ export default function HomePage() {
               globe.
             </p>
             <p className="detail">
-              <a href="https://docs.google.com/document/d/e/2PACX-1vR2IBkNe0G6INoq4IVjxDOgLSbXY0CppUQU2YhTj8hNz0CO1QvgE0fUCld-cUFPPRvbRINt7QH89-mv/pub">
+              <a href="https://drive.google.com/file/d/12xzQPJZxbyHB01HgOzfqhjY_5h7QrDwo/view?usp=sharing">
                 My Resume
               </a>
             </p>
