@@ -11,9 +11,10 @@
 
 .profile-pic {
   border-radius: 999rem;
-  border: 0.8rem solid #555;
   width: 22%;
   margin-bottom: 2rem;
+  box-shadow: 0 0 0 0.8rem #555;
+  -webkit-box-shadow: 0 0 0 0.8rem #555;
 }
 
 .title {
