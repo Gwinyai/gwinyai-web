@@ -6,10 +6,14 @@ import {
   faMedium,
   faStackOverflow,
 } from "@fortawesome/free-brands-svg-icons";
+import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
 import profilePic from "../images/profile.png";
 
 export default function HomePage() {
-  const handleContactAction = () => {
+  const handleCallAction = () => {
+    window.location.href = "tel:+263773213971";
+  };
+  const handleEmailAction = () => {
     window.location.href = "mailto:gnyatsoka@gmail.com";
   };
   return (
@@ -38,30 +42,6 @@ export default function HomePage() {
             <ul className="social-list">
               <li>
                 <a
-                  href="https://www.facebook.com/paulthesage"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <FontAwesomeIcon
-                    icon={faFacebook}
-                    size="2x"
-                  ></FontAwesomeIcon>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://www.linkedin.com/in/gwinyai-nyatsoka-4a026037/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <FontAwesomeIcon
-                    icon={faLinkedin}
-                    size="2x"
-                  ></FontAwesomeIcon>
-                </a>
-              </li>
-              <li>
-                <a
                   href="https://github.com/Gwinyai"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -83,6 +63,18 @@ export default function HomePage() {
               </li>
               <li>
                 <a
+                  href="https://www.linkedin.com/in/gwinyai-nyatsoka-4a026037/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FontAwesomeIcon
+                    icon={faLinkedin}
+                    size="2x"
+                  ></FontAwesomeIcon>
+                </a>
+              </li>
+              <li>
+                <a
                   href="https://medium.com/@gwinyai"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -90,12 +82,34 @@ export default function HomePage() {
                   <FontAwesomeIcon icon={faMedium} size="2x"></FontAwesomeIcon>
                 </a>
               </li>
+              <li>
+                <a
+                  href="https://www.facebook.com/paulthesage"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FontAwesomeIcon
+                    icon={faFacebook}
+                    size="2x"
+                  ></FontAwesomeIcon>
+                </a>
+              </li>
             </ul>
             <div className="buttons">
-              {" "}
-              <button className="button" onClick={handleContactAction}>
-                Contact
-              </button>{" "}
+              <button className="button" onClick={handleEmailAction}>
+                <FontAwesomeIcon
+                  className="contact-icon"
+                  icon={faEnvelope}
+                ></FontAwesomeIcon>
+                Email
+              </button>
+              <button className="button" onClick={handleCallAction}>
+                <FontAwesomeIcon
+                  className="contact-icon"
+                  icon={faPhone}
+                ></FontAwesomeIcon>
+                Call
+              </button>
             </div>
           </main>
         </div>
