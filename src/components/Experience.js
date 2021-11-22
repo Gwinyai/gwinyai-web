@@ -10,32 +10,51 @@ export default function Experience() {
             CTO at Cobbles LLC (2019 - 2021)
           </h2>
           <p className="experience-details">
-            I managed a diverse team of remote engineers from around the world.
-            I used Jira for task management and ran daily sprint meetings with
-            engineers. I supervised and contributed to the creation of the
-            Cobbles iOS app built using Swift, the Cobbles website using
-            ReactJS, the Cobbles admin panel using ReactJS and I personally
-            oversaw the overhaul of the Cobbles backend from GoLang to NodeJS.
+            Responsible for leading the engineering team, holding sprint
+            meetings, working with the design department and defining tasks
+            using Jira. Helped the company go from prototype to alpha release
+            that saw a $1 million seed raise and is currently securing Series A
+            funding. Replaced the previous CTO and directed the overhaul of the
+            app and backend to solve stability issues and scalability.
+            Contributed code to the iOS app with Swift, the websites in ReactJS
+            and the backend in NodeJS + GraphQL. Cobbles can be found here{" "}
+            <a
+              href="https://cobbl.es"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              https://cobbl.es
+            </a>
           </p>
           <h2 className="experience-heading">
-            Udemy Course Instructor (2019 to 2021)
+            Udemy Course Instructor (2018 to 2021)
           </h2>
           <p className="experience-details">
-            I created a course on app design, UI/UX and iOS app development on
-            Udemy. This course became a best-seller and has over 5000+ students
-            enrolled. The course has featured in blogs like TechZim.
+            Created a course that teaches app design, UI/UX and iOS app
+            development that went on to become a Udemy best-seller. The course
+            has over 7500 students enrolled from around the world and over 840
+            highly positive reviews. The course teaches Sketch, Figma, UI/UX
+            best practice, how to build native iOS apps using Swift and how to
+            create a custom interface using Core Animation, UI Kit and Core
+            Graphics. Instructor profile can be found here{" "}
+            <a
+              href="https://www.udemy.com/user/gwinyai-nyatsoka/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              https://www.udemy.com/user/gwinyai-nyatsoka/
+            </a>
           </p>
           <h2 className="experience-heading">
-            Tech Lead at Code Sage (2014 to 2018)
+            Tech Lead at Code Sage (2013 to 2018)
           </h2>
           <p className="experience-details">
-            I managed digital media marketing campaigns which include SEO, Pay
-            Per Click Advertising, Social Media Marketing, E-Mail marketing and
-            Content Marketing. My clients included Meikles, Premier Travel,
-            Autoworld, Truworths and Goldtech Electronics. I built websites
-            using Wordpress, Joomla, HTML, CSS, Javascript, JQuery, PHP and SQL.
-            I built an ecommerce website called Tuckshop using vanialla PHP. I
-            built computer games using Unity and C#.
+            Responsible for digital media marketing and web app development.
+            Lead the joint venture between DDHM and Code Sage. Created websites,
+            apps and WebGL games. Helped clients get first page results for SEO
+            and tens of thousands of followers on social media. Client accounts
+            managed include Premier Travel, Meikles, Autoworld (General Motors),
+            Goldtech Electronics, Truworths and Topics.
           </p>
         </div>
       </div>
