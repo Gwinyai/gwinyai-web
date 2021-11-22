@@ -23,6 +23,12 @@ export default function Skills() {
     <>
       <div className="section container">
         <h1 className="heading-primary">Skills</h1>
+        <p className="skill-detail">
+          My current active skills are in iOS app development using Swift, web
+          app development using ReactJS and backend development using NodeJS,
+          GraphQL, MongoDB and Apollo Server. I have had experience with other
+          technologies over the years.
+        </p>
         <div className="section-skills">
           <SkillBar
             animationDuration="1100"

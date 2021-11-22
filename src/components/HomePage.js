@@ -39,6 +39,11 @@ export default function HomePage() {
               best-selling iOS instructor with thousands of students across the
               globe.
             </p>
+            <p className="detail">
+              <a href="https://docs.google.com/document/d/e/2PACX-1vR2IBkNe0G6INoq4IVjxDOgLSbXY0CppUQU2YhTj8hNz0CO1QvgE0fUCld-cUFPPRvbRINt7QH89-mv/pub">
+                My Resume
+              </a>
+            </p>
             <ul className="social-list">
               <li>
                 <a
