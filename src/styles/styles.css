@@ -121,10 +121,9 @@
   list-style: none;
   display: flex;
   align-items: center;
-  gap: 3.2rem;
 }
 
-.main-nav-list {
+.main-nav-list > * {
   margin-left: 3.2rem;
 }
 
