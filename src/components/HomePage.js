@@ -32,7 +32,7 @@ export default function HomePage() {
             </h2>
             <p className="detail">
               Gwinyai is Founder at{" "}
-              <a href="https://fullstacktuts.com">Full Stack Tuts</a>. He is
+              <a href="https://fullstacktuts.com">Full Stack Tuts</a> LLC. He is
               also a{" "}
               <a href="https://www.udemy.com/user/gwinyai-nyatsoka/">Udemy</a>{" "}
               best-selling iOS instructor and a Fiverr's Choice awarded app
