@@ -7,7 +7,7 @@ import {
   faStackOverflow,
 } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
-import profilePic from "../images/profile.png";
+import profilePic from "../images/gwi.jpeg";
 
 export default function HomePage() {
   const handleCallAction = () => {
@@ -31,13 +31,13 @@ export default function HomePage() {
               iOS (Swift), NodeJS and ReactJS Developer
             </h2>
             <p className="detail">
-              Gwinyai is CTO at <a href="https://cobbl.es">Cobbles LLC</a> based
-              in Boston, Massachusetts. He is also a{" "}
-              <a href="https://www.fingaz.co.zw/course-created-by-a-zimbabwean-course-attains-best-seller-status-on-udemy/">
-                Udemy
-              </a>{" "}
-              best-selling iOS instructor with thousands of students across the
-              globe.
+              Gwinyai is Founder at{" "}
+              <a href="https://fullstacktuts.com">Full Stack Tuts</a>. He is
+              also a{" "}
+              <a href="https://www.udemy.com/user/gwinyai-nyatsoka/">Udemy</a>{" "}
+              best-selling iOS instructor and a Fiverr's Choice awarded app
+              developer coach on{" "}
+              <a href="https://www.fiverr.com/gwinyai1312">Fiverr</a>.
             </p>
             <p className="detail">
               <a href="https://drive.google.com/file/d/12xzQPJZxbyHB01HgOzfqhjY_5h7QrDwo/view?usp=sharing">
